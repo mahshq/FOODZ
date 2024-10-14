@@ -1,0 +1,33 @@
+{% extends 'base/web-base.html' %}
+
+{% block container %}
+
+{% load static %}
+
+<header class="flex fixed w-full bg-white py-4 pl-10 pr-14 border-b shadow-xl">
+    <a href="{% url 'web:cart' %}" class=""><img src="{% static 'web/images/arrow.png' %}" alt="" class="w-[25px]"></a>
+    <h1 class="text-[20px] font-bold mx-auto">Offer</h1>
+</header>
+
+<div class="pt-16">
+
+</div>
+
+<section class="wrapper">
+    {% for offer in offers %}
+    <div class="px-3 py-6 rounded-lg w-[580px] my-4 border shadow-md mx-auto">
+        <div class="pb-2 flex justify-between">
+            <h2 class="pb-2 text-[18px] font-semibold">{{offer.code}}</h2>
+            <button type="submit" class="py-1 px-8 bg-slate-400 hover:bg-[#30cd86] text-[14px] text-white font-semibold rounded-md">Apply</button>
+        </div>
+        <div class="pt-3 ">
+            <p class="text-red-500 border-b w-[370px] pb-2 text-[14px] font-bold">{{offer.offer_description}}</p>
+        </div>
+    </div>
+    {% endfor %}
+</section>
+
+
+
+
+{% endblock %}

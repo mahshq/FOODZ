@@ -1,0 +1,29 @@
+{% extends 'base/web-base.html' %}
+
+{% block container %}
+
+{% load static %}
+
+<header class="flex fixed w-full bg-white py-4 pl-10 pr-14 border-b shadow-md">
+    <a href="{% url 'web:index' %}" class=""><img src="{% static 'web/images/arrow.png' %}" alt="" class="w-[25px]"></a>
+    <h1 class="text-[24px] font-bold mx-auto">Address</h1>
+</header>
+
+<section class="py-14"></section>
+    <section class="wrappper">
+        <div class="">
+            <div class="p-3 bg-slate-200 rounded-xl w-[580px] h-[220px] shadow-md border mx-auto pr-32">
+                
+            </div>
+        </div>
+    </section>
+</section>
+
+<section class="w-[580px] mx-auto py-3 pr-32">
+
+    <button class="w-[580px] h-10 bg-red-500 text-white rounded-md font-semibold py-2 my-2 px-4">ADD NEW ADDRESS</button>
+
+</section>
+
+
+{% endblock %}
